@@ -1,6 +1,6 @@
 /* Sajjad Syed
 Module 2 Assignment 2 Solution 
-Date: September 25th, 2016 */
+Date: September 26th, 2016 */
 
 /* Base Styles */
 
@@ -8,12 +8,43 @@ Date: September 25th, 2016 */
 	box-sizing: border-box;
 }
 
-h1 {
+.bigscreentitle {
     font-family: "arial", Georgia, Serif;
     font-weight: bold;
     color: black;
     text-align: center;
-    margin-bottom: 15px;
+    visibility: visible;
+    position: relative;
+}
+
+.smallscreentitle {
+    font-family: "Courier New", Times, sans-serif;
+    font-weight: bold;
+    font-size: 0%;
+    padding: 10px;
+    color: blue;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+}
+
+.bigscreensubheadings {
+  border: 1px solid black;
+  text-align: center;
+  width: 30%;
+  margin-left: 70%;
+  font-family: Georgia,sans-serif;
+  font-weight: bold;
+  font-size: 125%;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+  visibility: visible;
+}
+
+.smallscreensubheadings {
+  font-size: 0%;
+  visibility: hidden;
 }
 
 
@@ -30,6 +61,7 @@ p {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
+  position: relative;
 }
 
 section {
@@ -40,22 +72,23 @@ section {
 	font-family: Helvetica;
 	color: black;
 	position: relative;
-	overflow: auto;
+  padding-right: 16px;
 }
 
 
-.title {
-  border: 1px solid black;
-  text-align: center;
-  width: 30%;
-  margin-left: 70%;
-  font-family: Georgia,sans-serif;
-  font-weight: bold;
-  font-size: 125%;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 5px;
+
+section.myautoscroll {
+  padding-right: 16px;
+  overflow: hidden;
 }
+        
+section.myautoscroll:hover {
+  padding-right: 0px;
+  cursor:ns-resize;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 
 #chicken {
 	background-color: pink;
@@ -174,6 +207,40 @@ section {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
  	float: left;
   }
+
+  .bigscreentitle {
+    font-family: "arial", Georgia, Serif;
+    font-weight: bold;
+    font-size: 0%;
+    color: black;
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .smallscreentitle {
+    font-family: "Courier New", Times, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    visibility: visible;
+  }
+
+.bigscreensubheadings {
+  font-size: 0%;
+  visibility: hidden;
+}
+
+.smallscreensubheadings {
+  border: 1px solid black;
+  text-align: center;
+  font-family: Georgia,sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  visibility: visible;
+  overflow: auto;
+}
+
 
   .col-sm-1 {
     width: 8.33%;
